@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechWave</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
 </head>
-<body inter-font>
+<body class="inter-font ">
     <header>
-        <nav class="navbar">
-            <div>
-                <h3>TechWave</h3>
+        <nav class="navbar ">
+            <div class="logo">
+                <h3 class="text-gray-700">Tech<span class="wave">Wave</span></h3>
             </div>
-            <div>
+            <div class="menu">
                 <ul>
                     <li><a href="">About</a></li>
                     <li><a href="">Episodes</a></li>
@@ -20,10 +25,36 @@
                 </ul>
 
             </div>
-            <div>
-                <button>Subcribe <img src="./assets/ArrowRight.png" alt=""></button>
+            <div class="nav-btn">
+                <button class="primary-btn">Subcribe <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="hamburger">
+                <img src="./assets/hamburger-menu.png" alt="">
             </div>
         </nav>
+        <section class="banner-section">
+            <div class="banner-container">
+               <div class="banner">
+                 <div class="banner-img">
+                    <div class="tooltip">NEW</div>
+                    <div class="banner-img-1"><img src="./assets/hero-circle.png" alt=""></div>
+                    <div class="banner-img-2"><img src="./assets/microphone.png" alt=""></div>
+                 </div>
+                <h3 class="banner-title">TechWave</h3>
+                <p class="banner-description">Your daily dose of tech insights, productivity hacks, and personal growth</p>
+                <button class="primary-btn"> <i class="fa-brands fa-spotify"></i> Listen on Spotify</button>
+                <button class="secondary-btn"><i class="fa-regular fa-envelope"></i> Subscribe</button>
+               </div>
+            </div>
+        </section>
     </header>
+    <main>
+        <section class="podcast">
+            <div class="podcast-content">
+
+            </div>
+            <div class="podcast-cart"></div>
+        </section>
+    </main>
 </body>
 </html>
