@@ -20,9 +20,9 @@
     font-size: 1rem;
     font-weight: 600px;
     text-align: center;
-    
     height: 44px;
     border: none;
+    cursor: pointer;
 }
 .text-green{
  color: #00FF88;
@@ -31,6 +31,10 @@
     color: #FFFFFF;
     opacity: 55%;
 }
+.primary-btn:hover{
+    transform: rotateX('angle');
+}
+
 /* main styles */
 
 .navbar{
@@ -48,6 +52,7 @@
     display: inline;
     background: linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
     color: transparent;
+    -webkit-perspective-origin: ;
     background-clip: text;
 }
 .menu ul{
@@ -69,29 +74,29 @@
     /* align-items: center; */
     justify-content: center;
     background: url(./assets/hero-bg.png);
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-size: cover;
     /* background-size: 100%; */
-    position: relative;
-    height: auto;
-}
-
-
-.banner-img-1{
-    width: 350px;
-    height: 350px;
-    margin-bottom: 20px;
-    
-    /* padding: top: 50px; */
-}
-.banner-img-2{
-    position: absolute;
-    bottom: 310px;
-    z-index: 1;
+    /* position: relative; */
+    height: 100vh;
+    width: 100%;
+    align-items: center;
 }
 .banner-img{
     justify-items:  center;
+    position: relative;
+    /* max-width: 550px; */
+    margin: 0 auto;
 }
+
+
+.banner-img-2{
+    position: absolute;
+    bottom: 90px;
+    z-index: 1;
+}
+
 .banner-title{ 
     font-size: 3.75rem;
     font-weight: bolder;
@@ -108,16 +113,17 @@
     padding: 12px 20px;
     color: #00FF88;
     margin-left: 8px;
+    cursor: pointer;
 }
 .tooltip{
     background-color: #00FF88;
-    border-radius: 100px;
+    border-radius: 1000px;
     padding: 8px 12px;
     color: #1A0B2E;
     box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
     position: absolute;
-    right: 600px;
-    top: 15px;
+    right: 145px;
+    /* top: 15px; */
     font-size: 1.12 rem;
     font-weight: 600px;
     z-index: 5;
@@ -160,11 +166,8 @@ hr{
     
 }
 
-/* feateured related styles */
+/* featured related styles */
 
-.featured{
-    padding: ;
-}
 
 .featured>h3{
     font-size: 3rem;
@@ -222,6 +225,7 @@ hr{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+    justify-content: center;
 }
 
 .episode{
@@ -272,8 +276,12 @@ hr{
     width: 40%;
     /* height: 100%; */
 }
-.host-content{
-    /* width: 60%; */
+.icon{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(83, 60, 114, 1);
+    border-radius: 50%;
+    padding: 10px;
 }
 .host-content h4{
     font-size: 1.5rem;
@@ -285,15 +293,68 @@ hr{
 .icons{
     display: flex;
         margin-top: 16px;
-        gap: 8px;
-        /* width: 100%; */
+    gap: 8px;
+    }
+/* footer related styles */
+/* .social-container{
+    display: grid;
+max-width: 540px;
+margin: 0 auto;
+grid-template-columns: 100px 120px 100px 100px;
+    gap: 30px;
+justify-content: center;
+justify-items: center;
 }
-.icons img{
-    border: 1px solid rgba(83, 60, 114, 1);
-    /* border-radius: 50%; */
-    border-radius: 50;
-    padding: 10px;
+.social{
+display: flex;
+gap: 8px;
+align-items: center;
+justify-items: center;
+/* margin-top: 32px; */
+/* margin-bottom: 32px;
+
+} */
+ .social-container{
+    max-width: 540px;
+    margin: 20px auto;
+    gap: 40px
+ }
+ .social-linksr{
+    display: grid;
+    grid-template-columns: 1fr, 2fr, 1fr,1fr;
+    text-align: center;
+    grid-row-gap: 30px;
+    justify-items: center;
+  justify-content: center;
+ }
+
+.social-icon{
+    width: 24px;
+    height: 24px;
+    
 }
+.footer-section{
+    text-align: center;
+    background: url(./assets/footer-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 120px;
+    gap: 20px;
+    padding: 120px 0px;
+}
+.footer-logo h4{
+    font-size: 3.5rem;
+    /* text-align: center; */
+    color: white;
+    font-weight: bolder;
+    margin: 0px;
+
+}
+.social-links{
+    color:white ;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+} 
 /* responsive media query */
 @media screen and (max-width:576px) {
     .navbar{
@@ -312,15 +373,20 @@ hr{
         display: none;
     }
     .banner-container{
-        
-        width: 100%;
-        background: url(./assets/hero-bg-2.png);
-        width: 100%;
-        background-size: cover;
-        background-position: center;
+
+        align-items: center;
+        justify-content: center;
+        background-position: center center;
         padding-top: 40px;
         margin-top: 0px;
             }
+            .banner-img{
+    /* justify-items:  center;
+    position: relative; */
+    /* max-width: 440px; */
+    /* margin: 0 auto; */
+}
+
     .banner-img-1{
     width: 200px;
     height: 200px;
@@ -331,8 +397,7 @@ hr{
     }
 
     .tooltip{
-    right: 170px;
-    top: 38px;
+    right: 150px;
     font-size: 1rem;
     font-weight: 600;
     }
@@ -387,15 +452,27 @@ hr{
         max-width: 400px;
         margin: 0 auto;
         text-align: center;
-        align-items: center;
-    }
+        padding: 20px 20px;
+            }
     .host-img{
         margin-right: 0px;
         margin-bottom: 10px;
     }
+    .icons{
+        justify-content: center;
+    }
+    .footer-section{
+        background-position: center;
+        height: 440px;
+        background-size: cover;
+        /* width: 100%; */
+    }
+.social-links{
+    grid-template-columns: repeat(2, 1fr);
+   
 }
 
-
+}
 @media screen and (min-width:576px) {
     .hamburger{
         display: none;
