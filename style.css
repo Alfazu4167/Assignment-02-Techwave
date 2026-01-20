@@ -20,17 +20,16 @@
     font-size: 1rem;
     font-weight: 600px;
     text-align: center;
-    /* width: 135px; */
+    
     height: 44px;
     border: none;
-        /* text-align: center; */
 }
 .text-green{
  color: #00FF88;
 }
 .text-light-white{
     color: #FFFFFF;
-    opacity: 60%;
+    opacity: 55%;
 }
 /* main styles */
 
@@ -46,8 +45,10 @@
     color: white;
 }
 .wave{
-    color: yellow;
-    background-image: linear-gradient(rgba(251, 9, 180, 1)rgba(145, 0, 248, 1)rgba(247, 233, 63, 1));
+    display: inline;
+    background: linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
+    color: transparent;
+    background-clip: text;
 }
 .menu ul{
     display: flex;
@@ -116,7 +117,7 @@
     box-shadow: 0px 3px 27px 0px rgba(0, 255, 136, 0.5);
     position: absolute;
     right: 600px;
-    top: 10px;
+    top: 15px;
     font-size: 1.12 rem;
     font-weight: 600px;
     z-index: 5;
@@ -254,8 +255,45 @@ hr{
     gap: 30px;
     padding: 10px 24px 24px 24px;
 }
-
-
+.host{
+    max-width: 1156px;
+    margin: 0 auto;
+}
+.host-container{
+    align-items: center;
+    padding: 40px 50px;
+    display: flex;
+    background: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.host-img {
+    margin-right: 24px;
+    width: 40%;
+    /* height: 100%; */
+}
+.host-content{
+    /* width: 60%; */
+}
+.host-content h4{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    /* margin-left: 24px; */
+}
+.icons{
+    display: flex;
+        margin-top: 16px;
+        gap: 8px;
+        /* width: 100%; */
+}
+.icons img{
+    border: 1px solid rgba(83, 60, 114, 1);
+    /* border-radius: 50%; */
+    border-radius: 50;
+    padding: 10px;
+}
 /* responsive media query */
 @media screen and (max-width:576px) {
     .navbar{
@@ -293,8 +331,8 @@ hr{
     }
 
     .tooltip{
-    right: 162px;
-    top: 32px;
+    right: 170px;
+    top: 38px;
     font-size: 1rem;
     font-weight: 600;
     }
@@ -343,6 +381,17 @@ hr{
         font-size: 1.3rem;
         /* width: 400px; */
         /* margin: 0 auto; */
+    }
+    .host-container{
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+    }
+    .host-img{
+        margin-right: 0px;
+        margin-bottom: 10px;
     }
 }
 
